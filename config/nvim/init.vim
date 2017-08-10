@@ -16,7 +16,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'ingydotnet/yaml-vim'
 
 " Colors :)
-" Plug 'flazz/vim-colorschemes'
 Plug 'znake/znake-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
@@ -25,7 +24,6 @@ Plug 'sjl/badwolf'
 Plug 'nowk/genericdc'
 Plug 'jordwalke/flatlandia'
 Plug 'effkay/argonaut.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'fcpg/vim-fahrenheit'
 Plug 'jacoborus/tender.vim'
 Plug 'alessandroyorba/alduin'
@@ -205,8 +203,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 map <c-p> :FZF<CR>
 map <leader>bp :Buffers<CR>
-nmap <leader>a :bprev<CR>
-nmap <leader>s :bnext<CR>
+nmap <Left> :bprev<CR>
+nmap <Right> :bnext<CR>
 
 " Fast buffer closing
 nmap <leader>q :bp\|bd #<CR>
