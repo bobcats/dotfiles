@@ -85,6 +85,7 @@ Plug 'vim-scripts/file-line'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ' '
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    set ft=ruby
 set termguicolors

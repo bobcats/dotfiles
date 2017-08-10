@@ -11,3 +11,4 @@ function git_prompt_info() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
