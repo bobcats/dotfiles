@@ -1,0 +1,38 @@
+[color]
+  ui = true
+[user]
+  name  = Brian Field
+  email = brian@madsalty.com
+[color]
+  diff   = auto
+  status = auto
+  branch = auto
+  ui     = auto
+[alias]
+  aa     = add --intent-to-add --all
+  ap     = add --patch
+  br     = branch
+  c      = commit
+  ca     = commit --amend
+  cm     = checkout master
+  co     = checkout
+  df     = diff
+  dfom   = diff origin/master
+  fo     = fetch origin
+  ll     = pull origin master
+  lr     = pull --rebase origin master
+  pf     = push --force-with-lease origin HEAD
+  pl     = pull
+  pp     = push origin HEAD
+  s      = status
+  recent = for-each-ref --count 10 --sort=-committerdate refs/heads/
+[core]
+  editor   = nvim
+  autocrlf = input
+  fileMode = false
+[push]
+  default = simple
+[merge]
+  renamelimit = 9999
+[commit]
+  verbose = true
