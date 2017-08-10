@@ -16,6 +16,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'ingydotnet/yaml-vim'
 
 " Colors :)
+Plug 'Zabanaa/neuromancer.vim'
+Plug 'AlessandroYorba/Sierra'
+Plug 'AlessandroYorba/Despacio'
+Plug 'cocopon/iceberg.vim'
+Plug 'dracula/vim'
 Plug 'znake/znake-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
@@ -89,7 +94,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    s
 set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark='soft'
-colorscheme brogrammer
+colorscheme dracula
 filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start
@@ -196,7 +201,7 @@ endif
 
 " Airline settings
 
-let g:airline_theme="jellybeans"
+let g:airline_theme="dracula"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
