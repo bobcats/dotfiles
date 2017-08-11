@@ -8,12 +8,13 @@ Plug 'tomtom/tcomment_vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-surround'
 Plug 'mileszs/ack.vim'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-endwise'
 Plug 'kana/vim-textobj-user'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'junegunn/fzf.vim'
 Plug 'ingydotnet/yaml-vim'
+Plug 'janko-m/vim-test'
+Plug 'benmills/vimux'
 
 " Colors :)
 Plug 'Zabanaa/neuromancer.vim'
@@ -178,16 +179,12 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-"" Plug Settings
-
-" Vroom settings
-let g:vroom_detect_spec_helper = 1
-let g:vroom_use_spring = 1
-let g:vroom_use_binstubs = 0
-let g:vroom_cucumber_path = 'cucumber'
-let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>r :call RunNearestSpec()<CR>
+let test#strategy = 'vimux'
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
@@ -217,11 +214,6 @@ nmap <leader>q :bp\|bd #<CR>
 " edit .vimrc
 nmap <leader>ev :e ~/.config/nvim/init.vim<CR>
 nmap <leader>zv :source ~/.config/nvim/init.vim<CR>
-
-" Tslime
-nmap <leader>tr <Plug>SetTmuxVars
-" let g:tslime_window = 'test'
-" let g:tslime_pane = 0
 
 " GitGutter
 
