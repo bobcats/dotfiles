@@ -16,3 +16,5 @@ export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
+
+export PATH="$HOME/.cargo/bin:$PATH"
