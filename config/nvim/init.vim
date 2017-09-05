@@ -15,6 +15,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ingydotnet/yaml-vim'
 Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
+Plug 'kassio/neoterm'
 
 " Colors :)
 Plug 'Zabanaa/neuromancer.vim'
@@ -179,7 +180,16 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
-let test#strategy = 'vimux'
+tnoremap <Esc> <C-\><C-n>
+
+let test#strategy = 'neoterm'
+
+let g:neoterm_clear_cmd = "clear; printf '=%.0s' {1..80}; clear"
+let g:neoterm_position = "horizontal"
+let g:neoterm_automap_keys = ",tt"
+let g:neoterm_split_on_tnew = 1
+let g:neoterm_size = 20
+let g:neoterm_autoscroll = 0
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>

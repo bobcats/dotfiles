@@ -17,4 +17,6 @@ export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 
 . $HOME/.asdf/completions/asdf.bash
 
+. /usr/local/etc/profile.d/z.sh
+
 export PATH="$HOME/.cargo/bin:$PATH"
