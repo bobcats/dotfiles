@@ -16,6 +16,7 @@ Plug 'ingydotnet/yaml-vim'
 Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
 Plug 'kassio/neoterm'
+Plug 'FooSoft/vim-argwrap'
 
 " Colors :)
 Plug 'Zabanaa/neuromancer.vim'
@@ -198,11 +199,6 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
-  cnoreabbrev ag Ack
-  cnoreabbrev aG Ack
-  cnoreabbrev Ag Ack
-  cnoreabbrev AG Ack
-  " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor\ -U
 endif
 
@@ -250,3 +246,6 @@ let g:elm_format_autosave = 1
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 let g:rustfmt_autosave = 1
 
+" argwrap
+nnoremap <silent> <leader>a :ArgWrap<CR>
+let g:argwrap_tail_comma = 1
