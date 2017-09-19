@@ -91,13 +91,14 @@ Plug 'vim-scripts/file-line'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 let mapleader = ' '
 au BufRead,BufNewFile {COMMIT_EDITMSG}                                         set ft=gitcommit
 au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    set ft=ruby
 set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark='soft'
-colorscheme dracula
+colorscheme gruvbox
 filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start
@@ -204,7 +205,7 @@ endif
 
 " Airline settings
 
-let g:airline_theme="dracula"
+let g:airline_theme="gruvbox"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
