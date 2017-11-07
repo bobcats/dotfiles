@@ -59,6 +59,7 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'walm/jshint.vim'
 Plug 'vim-scripts/jQuery'
 Plug 'mxw/vim-jsx'
+Plug 'joukevandermaas/vim-ember-hbs'
 
 " Clojure
 " Plug 'guns/vim-clojure-static'
@@ -98,7 +99,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    s
 set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark='soft'
-colorscheme gruvbox
+colorscheme dracula
 filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start
@@ -106,7 +107,7 @@ set colorcolumn=80
 set encoding=utf-8
 set expandtab
 set foldenable
-set foldlevel=100
+set foldlevel=80
 set foldmethod=marker
 set foldopen=block,hor,mark,percent,quickfix,tag
 set formatoptions-=or
@@ -132,7 +133,7 @@ set smartcase
 set smarttab
 set softtabstop=2
 set tabstop=2
-set textwidth=100
+set textwidth=80
 set wildmenu
 set wildmode=longest,list
 syntax on
