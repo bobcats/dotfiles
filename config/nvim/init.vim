@@ -17,6 +17,7 @@ Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
 Plug 'kassio/neoterm'
 Plug 'FooSoft/vim-argwrap'
+Plug 'pbrisbin/vim-mkdir'
 
 " Colors :)
 Plug 'Zabanaa/neuromancer.vim'
@@ -192,7 +193,7 @@ let g:neoterm_position = "horizontal"
 let g:neoterm_automap_keys = ",tt"
 let g:neoterm_split_on_tnew = 1
 let g:neoterm_size = 20
-let g:neoterm_autoscroll = 0
+let g:neoterm_autoscroll = 1
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
