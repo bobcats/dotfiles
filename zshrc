@@ -1,6 +1,8 @@
 export ZSH=/Users/brianfield/.oh-my-zsh
 ZSH_THEME="afowler"
 EDITOR="nvim"
+HISTSIZE=10000000
+SAVEHIST=10000000
 plugins=(gitfast osx)
 source $ZSH/oh-my-zsh.sh
 eval "$(rbenv init -)"
@@ -16,3 +18,5 @@ export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 . /usr/local/etc/profile.d/z.sh
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"

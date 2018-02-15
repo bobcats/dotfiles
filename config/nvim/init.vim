@@ -249,6 +249,8 @@ let g:elm_format_autosave = 1
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 let g:rustfmt_autosave = 1
 
+let g:go_fmt_autosave = 1
+
 " argwrap
 nnoremap <silent> <leader>a :ArgWrap<CR>
 let g:argwrap_tail_comma = 1
