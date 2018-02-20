@@ -100,7 +100,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Capfile,Guardfile,*.rake,config.ru}    s
 set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark='soft'
-colorscheme dracula
+colorscheme tender
 filetype plugin indent on
 set autoindent
 set backspace=indent,eol,start
@@ -200,18 +200,23 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep --smart-case'
-  set grepprg=ag\ --nogroup\ --nocolor\ -U
+" if executable('ag')
+"   let g:ackprg = 'ag --vimgrep --smart-case'
+"   set grepprg=ag\ --nogroup\ --nocolor\ -U
+" endif
+"
+if executable('rg')
+  let g:ackprg = 'rg --vimgrep --smart-case'
+  set grepprg=rg\ --nogroup\ --nocolor\ -U
 endif
 
 " Airline settings
 
-let g:airline_theme="dracula"
+let g:airline_theme="tender"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
 map <c-p> :FZF<CR>
 map <leader>bp :Buffers<CR>
 nmap <Left> :bprev<CR>
