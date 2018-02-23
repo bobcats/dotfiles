@@ -61,6 +61,7 @@ Plug 'walm/jshint.vim'
 Plug 'vim-scripts/jQuery'
 Plug 'mxw/vim-jsx'
 Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'posva/vim-vue'
 
 " Clojure
 " Plug 'guns/vim-clojure-static'
@@ -243,7 +244,7 @@ nmap <leader>gc :Gcommit<CR>
 let g:jsx_ext_required = 0
 
 " Rubocop
-" let g:vimrubocop_config = '~/.rubocop.yml'
+let g:vimrubocop_config = '~/.rubocop.yml'
 
 " Elm
 autocmd FileType elm setlocal shiftwidth=4 tabstop=4

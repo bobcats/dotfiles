@@ -34,5 +34,6 @@
   default = simple
 [merge]
   renamelimit = 9999
+  conflictstyle = diff3
 [commit]
   verbose = true
