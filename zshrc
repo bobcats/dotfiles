@@ -20,3 +20,6 @@ export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
+
+alias l="exa -lah"
+alias ll="exa -lh"
