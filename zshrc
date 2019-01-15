@@ -3,6 +3,7 @@ ZSH_THEME="afowler"
 EDITOR="nvim"
 HISTSIZE=10000000
 SAVEHIST=10000000
+export NVM_DIR="$HOME/.nvm"
 plugins=(gitfast osx)
 source $ZSH/oh-my-zsh.sh
 eval "$(rbenv init -)"
@@ -16,10 +17,17 @@ function git_prompt_info() {
 export PATH="/usr/local/opt/postgresql@9.5/bin:$PATH"
 
 . /usr/local/etc/profile.d/z.sh
+. "/usr/local/opt/nvm/nvm.sh"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$HOME/bin"
 
 alias l="exa -lah"
 alias ll="exa -lh"
+alias cat="bat"
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash

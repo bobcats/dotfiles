@@ -27,7 +27,7 @@
   s      = status
   recent = for-each-ref --count 10 --sort=-committerdate refs/heads/
 [core]
-  editor   = nvim
+  editor   = code --wait
   autocrlf = input
   fileMode = false
 [push]
